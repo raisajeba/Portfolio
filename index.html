@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeba | Portfolio</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Arial, sans-serif; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      top:0;
+      background:#111827;
+      padding:10px 0;
+      z-index:100;
+    }
+
+    nav ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      margin:0;
+      padding:0;
+    }
+
+    nav li { margin:0 20px; }
+
+    nav a {
+      color:white;
+      font-weight:bold;
+    }
+
+    nav a:hover { color:#2563eb; }
+
+    /* Hero Section */
+    header {
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+      color:white;
+      text-align:center;
+    }
+
+    .profile-img {
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid white;
+      margin-bottom:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    header h1 { font-size:3rem; margin:0; }
+    header p { font-size:1.2rem; margin-top:10px; }
+
+    /* Sections */
+    section {
+      padding:80px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    h2 {
+      font-size:2rem;
+      border-bottom:3px solid #764ba2;
+      display:inline-block;
+      padding-bottom:5px;
+      margin-bottom:20px;
+    }
+
+    .card {
+      background:white;
+      padding:20px;
+      margin:15px 0;
+      border-radius:10px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Award Image */
+    .award-img {
+      width:260px;
+      border-radius:10px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      display:block;
+      margin:20px auto 0;
+    }
+
+    /* Skills */
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+    }
+
+    .skills div {
+      flex:1 1 30%;
+      margin:10px;
+      padding:20px;
+      background:#f4f4f4;
+      border-radius:10px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skills div:hover {
+      transform:translateY(-5px);
+      background:#667eea;
+      color:white;
+    }
+
+    /* Projects */
+    .projects .card {
+      transition:0.3s;
+    }
+
+    .projects .card:hover {
+      transform:translateY(-5px);
+      background:#764ba2;
+      color:white;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#111827;
+      color:white;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#academic">Academic Summary</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <img src="profile.jpg" alt="Jeba" class="profile-img">
+    <h1 id="typed"></h1>
+    <p>Building the logic behind the web</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Hello! I'm Jeba, a dedicated student and aspiring Backend Developer. I enjoy solving complex problems and building the logic that powers modern web applications. Currently, I'm focusing on mastering server-side technologies and databases to create scalable and efficient systems.</p>
+    </div>
+  </section>
+
+  <!-- Academic Summary -->
+  <section id="academic">
+    <h2>Academic Summary</h2>
+    <div class="card">
+      <h3>Higher Secondary Certificate (HSC)</h3>
+      <p>Group: Science</p>
+      <p>GPA: 5.00</p>
+
+      <h3>BSc in Computer Science (2nd Year)</h3>
+      <p>Current CGPA: 3.66</p>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards">
+    <h2>Awards & Recognition</h2>
+    <div class="card">
+      <h3>Dean's Award</h3>
+      <p>Received Dean’s Award for outstanding academic performance.</p>
+
+      <img src="award.jpeg" alt="Dean Award" class="award-img">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>HTML & CSS</div>
+      <div>JavaScript</div>
+      <div>Node.js</div>
+      <div>Java & OOP</div>
+      <div>SQL</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>DOM App</h3>
+        <p>Java OOP backend project for managing users and orders.</p>
+      </div>
+      <div class="card">
+        <h3>Game Matchmaking Backend</h3>
+        <p>Java backend system for handling sessions and matchmaking logic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: your-email@example.com</p>
+      <p>GitHub: github.com/yourusername</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Jeba | Student Portfolio</p>
+  </footer>
+
+  <script>
+    const text = "Hi, I'm Jeba!";
+    let i = 0;
+    function type() {
+      if(i < text.length) {
+        document.getElementById('typed').innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 150);
+      }
+    }
+    type();
+  </script>
+
+</body>
+</html>
